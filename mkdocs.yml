@@ -1,0 +1,17 @@
+site_name: Chen Li
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+nav:
+  - Home: index.md
+  - About: about.md
+  - Projects: projects.md
+  - Publications: publications.md
+  - Contact: contact.md

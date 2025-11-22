@@ -1,0 +1,3 @@
+# Publications
+- Chen Li, Adele Moatti, Xuying Zhang, H. Troy Ghashghaei, and Alon Greenbaum, "Deep learning-based autofocus method enhances image quality in light-sheet fluorescence microscopy," Biomed. Opt. Express 12, 5214-5226 (2021)
+- Chen Li, Mani Ratnam Rai, H. Troy Ghashghaei, and Alon Greenbaum, "Illumination angle correction during image acquisition in light-sheet fluorescence microscopy using deep learning," Biomed. Opt. Express 13, 888-901 (2022)
