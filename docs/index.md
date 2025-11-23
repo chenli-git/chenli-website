@@ -1,3 +1,11 @@
+<div style="text-align: center; margin: 20px 0;">
+  <img src="assets/images/profile.jpeg" alt="Chen Li" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+</div>
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="assets/images/profile.jpeg" alt="Chen Li" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+</div>
+
 # Chen Li
 
 **Senior Image Data Scientist** | St. Jude Children's Research Hospital
