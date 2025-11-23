@@ -1,12 +1,14 @@
+<div style="text-align: center; margin: 20px 0;">
+  <img src="assets/images/profile.jpeg" alt="Chen Li" style="border-radius: 50%; width: 400px; height: 400px; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+</div>
+
 # Chen Li
 
 **Senior Image Data Scientist** | St. Jude Children's Research Hospital
 
 Welcome! I specialize in microscopy image analysis, deep learning pipelines, and multi-agent AI systems for bioimaging research.
 
-<div style="text-align: center; margin: 30px 0;">
-  <img src="assets/images/profile.jpeg" alt="Chen Li" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
+
 
 ## What I Do
 
