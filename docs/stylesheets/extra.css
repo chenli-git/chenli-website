@@ -1,0 +1,74 @@
+/* Apple-inspired gradient background */
+:root {
+  --gradient-start: #007AFF;
+  --gradient-mid: #5856D6;
+  --gradient-end: #AF52DE;
+}
+
+/* Light mode gradient background */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #007AFF;
+  --md-accent-fg-color: #5AC8FA;
+}
+
+[data-md-color-scheme="default"] .md-header {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+}
+
+/* Dark mode sleek background */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0A84FF;
+  --md-accent-fg-color: #64D2FF;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: linear-gradient(135deg, #1d1d1f 0%, #2d2d30 50%, #3a3a3c 100%);
+}
+
+/* Smooth glassmorphism effect for cards */
+.md-typeset h2 {
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Apple-style buttons and links */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  transition: all 0.3s ease;
+}
+
+.md-typeset a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
+
+/* Smooth animations */
+.md-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile image with Apple glow effect */
+img[alt="Chen Li"] {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 10px 30px rgba(0, 122, 255, 0.3));
+}
+
+img[alt="Chen Li"]:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 15px 40px rgba(0, 122, 255, 0.5));
+}
+
+/* Highlight boxes with gradient borders */
+.md-typeset .admonition {
+  border-left: 4px solid;
+  border-image: linear-gradient(180deg, var(--gradient-start), var(--gradient-end)) 1;
+  backdrop-filter: blur(10px);
+}

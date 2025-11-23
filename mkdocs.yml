@@ -6,17 +6,17 @@ site_description: Personal website of Chen Li, Senior Image Data Scientist speci
 theme:
   name: material
   palette:
-    # Light mode
+    # Light mode - Apple-inspired gradient
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: blue
+      accent: cyan
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Dark mode
+    # Dark mode - Deep blue/purple
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: deep purple
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -25,6 +25,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.tracking
     - toc.integrate
     - content.code.copy
     - content.code.annotate
@@ -32,6 +33,9 @@ theme:
     - search.suggest
   icon:
     repo: fontawesome/brands/github
+  font:
+    text: SF Pro Display
+    code: SF Mono
 
 # Repository
 repo_name: chenli-git/chenli-website
@@ -70,6 +74,10 @@ extra:
       link: https://www.linkedin.com/in/chenli-unc-ncsu/
     - icon: fontawesome/solid/envelope
       link: mailto:chenli970701@gmail.com
-      
+
+extra_css:
+  - stylesheets/extra.css
+      link: mailto:chenli970701@gmail.com
+
 extra_javascript:
   - js/cloudflare.js
