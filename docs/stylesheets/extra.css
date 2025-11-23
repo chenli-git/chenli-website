@@ -179,11 +179,31 @@ img[alt="Chen Li"]:hover {
 }
 
 /* Animated bullet points */
+.md-typeset ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .md-typeset ul li {
   position: relative;
+  padding-left: 1.5em;
   transition: all 0.3s ease;
   opacity: 0;
   animation: slideIn 0.5s ease forwards;
+}
+
+.md-typeset ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0.3em;
+  color: var(--md-primary-fg-color);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.md-typeset ul li:hover::before {
+  transform: scale(1.5);
+  text-shadow: 0 0 10px rgba(0, 122, 255, 0.6);
 }
 
 .md-typeset ul li:nth-child(1) { animation-delay: 0.1s; }
