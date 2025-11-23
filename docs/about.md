@@ -29,7 +29,7 @@ North Carolina State University & UNC Chapel Hill | 2019-2024
 **Master in Automation**  
 Huazhong University of Science and Technology | 2016-2019
 
-**B.S. in Automation**
+**B.S. in Automation**  
 Chongqing University | 2012-2016
 
 ## Technical Skills
@@ -38,7 +38,7 @@ Chongqing University | 2012-2016
 **Deep Learning**: PyTorch, TensorFlow, MONAI, PyTorch Lightning  
 **Image Processing**: Fiji/ImageJ, OpenCV, scikit-image, CellProfiler  
 **Tools & Frameworks**: Docker, Git, HPC/SLURM, LangChain  
-**Specialties**: Microscopy image analysis, distributed training, GUI development
+**Specialties**: Microscopy image analysis, distributed training, Frontend development
 
 ## Research Interests
 
