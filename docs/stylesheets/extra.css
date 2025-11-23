@@ -163,7 +163,7 @@ img[alt="Chen Li"]:hover {
 
 /* Smooth tab transitions */
 .md-tabs__link {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.3s ease, border-radius 0.3s ease;
   position: relative;
   padding: 1.5rem 1.5rem !important; /* Larger clickable area */
   min-width: 100px;
@@ -171,7 +171,6 @@ img[alt="Chen Li"]:hover {
 }
 
 .md-tabs__link:hover {
-  transform: translateY(-3px);
   background: rgba(0, 122, 255, 0.1);
   border-radius: 8px;
 }
