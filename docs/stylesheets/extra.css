@@ -17,13 +17,12 @@ body {
   position: fixed;
   width: 20px;
   height: 20px;
-  border: 2px solid var(--gradient-start);
+  border: 2px solid #007AFF;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transition: all 0.15s ease;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 122, 255, 0.3);
 }
 
 .custom-cursor::before {
@@ -32,11 +31,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
+  width: 8px;
+  height: 8px;
+  background: #007AFF;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 122, 255, 0.8);
 }
 
 /* Cursor follower trail */
@@ -182,34 +181,7 @@ img[alt="Chen Li"]:hover {
 /* Animated bullet points */
 .md-typeset ul li {
   position: relative;
-  padding-left: 1.5em;
   transition: all 0.3s ease;
-}
-
-.md-typeset ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 8px;
-  height: 8px;
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
-  border-radius: 50%;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.md-typeset ul li:hover::before {
-  transform: scale(1.5);
-  box-shadow: 0 0 15px rgba(0, 122, 255, 0.6);
-}
-
-.md-typeset ul li:hover {
-  transform: translateX(5px);
-  color: var(--md-primary-fg-color);
-}
-
-/* Staggered animation for list items */
-.md-typeset ul li {
   opacity: 0;
   animation: slideIn 0.5s ease forwards;
 }
@@ -220,6 +192,11 @@ img[alt="Chen Li"]:hover {
 .md-typeset ul li:nth-child(4) { animation-delay: 0.4s; }
 .md-typeset ul li:nth-child(5) { animation-delay: 0.5s; }
 .md-typeset ul li:nth-child(n+6) { animation-delay: 0.6s; }
+
+.md-typeset ul li:hover {
+  transform: translateX(5px);
+  color: var(--md-primary-fg-color);
+}
 
 @keyframes slideIn {
   from {
