@@ -6,20 +6,60 @@ document.addEventListener('DOMContentLoaded', function() {
   let targetX = 0;
   let targetY = 0;
 
+  // Create custom cursor elements
+  const cursor = document.createElement('div');
+  cursor.className = 'custom-cursor';
+  body.appendChild(cursor);
+
+  const follower = document.createElement('div');
+  follower.className = 'cursor-follower';
+  body.appendChild(follower);
+
+  let cursorX = 0;
+  let cursorY = 0;
+  let followerX = 0;
+  let followerY = 0;
+
   // Track mouse movement
   document.addEventListener('mousemove', function(e) {
     mouseX = e.clientX;
     mouseY = e.clientY;
+    cursorX = e.clientX;
+    cursorY = e.clientY;
+  });
+
+  // Hide cursor when leaving window
+  document.addEventListener('mouseleave', function() {
+    cursor.style.opacity = '0';
+    follower.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseenter', function() {
+    cursor.style.opacity = '1';
+    follower.style.opacity = '1';
   });
 
   // Smooth animation using requestAnimationFrame
   function animateBackground() {
-    // Smooth interpolation
+    // Smooth interpolation for background
     targetX += (mouseX - targetX) * 0.05;
     targetY += (mouseY - targetY) * 0.05;
 
+    // Smooth interpolation for cursor follower
+    followerX += (cursorX - followerX) * 0.1;
+    followerY += (cursorY - followerY) * 0.1;
+
     const xPercent = (targetX / window.innerWidth) * 100;
     const yPercent = (targetY / window.innerHeight) * 100;
+
+    // Update cursor positions
+    cursor.style.left = cursorX + 'px';
+    cursor.style.top = cursorY + 'px';
+    cursor.style.transform = 'translate(-50%, -50%)';
+
+    follower.style.left = followerX + 'px';
+    follower.style.top = followerY + 'px';
+    follower.style.transform = 'translate(-50%, -50%)';
 
     // Check if dark mode or light mode
     const isDarkMode = document.body.getAttribute('data-md-color-scheme') === 'slate';

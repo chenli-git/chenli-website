@@ -9,6 +9,61 @@
 body {
   transition: background 0.3s ease;
   background-attachment: fixed;
+  cursor: none; /* Hide default cursor */
+}
+
+/* Custom fancy cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gradient-start);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.15s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
+  border-radius: 50%;
+}
+
+/* Cursor follower trail */
+.cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(0, 122, 255, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.25s ease;
+  background: radial-gradient(circle, rgba(0, 122, 255, 0.1), transparent);
+}
+
+/* Cursor hover effects on links and buttons */
+body:has(a:hover) .custom-cursor,
+body:has(button:hover) .custom-cursor {
+  width: 40px;
+  height: 40px;
+  border-color: var(--gradient-mid);
+  background: radial-gradient(circle, rgba(88, 86, 214, 0.2), transparent);
+}
+
+body:has(a:hover) .cursor-follower,
+body:has(button:hover) .cursor-follower {
+  width: 60px;
+  height: 60px;
+  border-color: var(--gradient-end);
 }
 
 /* Content container with subtle backdrop */
