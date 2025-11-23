@@ -1,5 +1,9 @@
 # About Me
 
+<div style="text-align: center; margin: 20px 0;">
+  <img src="assets/images/profile.jpeg" alt="Chen Li" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+</div>
+
 ## Professional Summary
 
 I'm a Senior Image Data Scientist at St. Jude Children's Research Hospital, where I develop cutting-edge image analysis tools and deep learning pipelines for biomedical research. With expertise spanning microscopy, AI/ML, and software development, I bridge the gap between advanced imaging technology and practical research applications.
