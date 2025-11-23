@@ -1,5 +1,5 @@
 <div style="text-align: center; margin: 20px 0;">
-  <img src="assets/images/profile.jpeg" alt="Chen Li" style="border-radius: 50%; width: 400px; height: 400px; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="assets/images/profile.jpeg" alt="Chen Li" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
 </div>
 
 # Chen Li

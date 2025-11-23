@@ -1,14 +1,14 @@
 # Publications
 
-For a complete list of publications and citation metrics, visit my [Google Scholar profile](https://scholar.google.com/citations?user=WvrzkYEAAAAJ&hl=en).
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=WvrzkYEAAAAJ&hl=en)
 
-## Journal Articles
+## Selected Journal Articles
 
 1. **Chen Li**, Mani Ratnam Rai, Yehe Cai, H. Troy Ghashghaei, and Alon Greenbaum  
    "Intelligent Beam Optimization for Light-Sheet Fluorescence Microscopy through Deep Learning"  
    *Intelligent Computing* 3, 0095 (2024)
 
-2. Yeheng Cai, Xuying Zhang, **Chen Li**, H. Troy Ghashghaei, and Alon Greenbaum  
+2. Yehe Cai, Xuying Zhang, **Chen Li**, H. Troy Ghashghaei, and Alon Greenbaum  
    "COMBINe enables automated detection and classification of neurons and astrocytes in tissue-cleared mouse brains"  
    *Cell Reports Methods* 3 (4) (2023)
 
@@ -18,8 +18,7 @@ For a complete list of publications and citation metrics, visit my [Google Schol
 
 4. **Chen Li**, Mani Ratnam Rai, H. Troy Ghashghaei, and Alon Greenbaum  
    "Illumination angle correction during image acquisition in light-sheet fluorescence microscopy using deep learning"  
-   *Biomedical Optics Express* 13 (2), 888-901 (2022)  
-   [DOI: 10.1364/BOE.449858](https://doi.org/10.1364/BOE.449858)
+   *Biomedical Optics Express* 13 (2), 888-901 (2022)
 
 5. Mani Ratnam Rai, **Chen Li**, and Alon Greenbaum  
    "Quantitative analysis of illumination and detection corrections in adaptive light sheet fluorescence microscopy"  
@@ -31,8 +30,7 @@ For a complete list of publications and citation metrics, visit my [Google Schol
 
 7. **Chen Li**, Adele Moatti, Xuying Zhang, H. Troy Ghashghaei, and Alon Greenbaum  
    "Deep learning-based autofocus method enhances image quality in light-sheet fluorescence microscopy"  
-   *Biomedical Optics Express* 12 (8), 5214-5226 (2021)  
-   [DOI: 10.1364/BOE.422747](https://doi.org/10.1364/BOE.422747)
+   *Biomedical Optics Express* 12 (8), 5214-5226 (2021)
 
 8. Adele Moatti, Yehe Cai, **Chen Li**, Tanner Sattler, Lauren Edwards, Jorge Piedrahita, Frances S. Ligler, and Alon Greenbaum  
    "Three-dimensional imaging of intact porcine cochlea using tissue clearing and custom-built light-sheet microscopy"  
