@@ -113,32 +113,18 @@ body:has(button:hover) .cursor-follower {
   background: linear-gradient(135deg, #1d1d1f 0%, #2d2d30 50%, #3a3a3c 100%);
 }
 
-/* Fix header and tabs in place - no movement on scroll */
-.md-header,
-.md-tabs {
-  position: fixed !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-}
-
+/* Fix header in place */
 .md-header {
+  position: fixed !important;
   top: 0 !important;
   z-index: 1001 !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
 }
 
-.md-tabs {
+/* Style sidebar navigation */
+.md-sidebar--primary {
+  position: fixed !important;
   top: 3.5rem !important;
-  z-index: 1000 !important;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Add top margin to content so it's not hidden under fixed headers */
-.md-main {
-  padding-top: 7rem !important;
+  height: calc(100vh - 3.5rem) !important;
 }
 
 /* Smooth glassmorphism effect for cards */
