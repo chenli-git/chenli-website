@@ -113,6 +113,26 @@ body:has(button:hover) .cursor-follower {
   background: linear-gradient(135deg, #1d1d1f 0%, #2d2d30 50%, #3a3a3c 100%);
 }
 
+/* Hide left sidebar navigation since we have top tabs */
+.md-sidebar--primary {
+  display: none !important;
+}
+
+/* Remove all animations from navigation tabs */
+.md-tabs,
+.md-tabs__link,
+.md-tabs__item {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Simple hover effect without movement */
+.md-tabs__link:hover {
+  background: rgba(0, 122, 255, 0.1);
+  border-radius: 8px;
+}
+
 /* Smooth glassmorphism effect for cards */
 .md-typeset h2 {
   background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid));
@@ -160,22 +180,6 @@ img[alt="Chen Li"]:hover {
   border-image: linear-gradient(180deg, var(--gradient-start), var(--gradient-end)) 1;
   backdrop-filter: blur(10px);
 }
-
-/* Smooth tab transitions */
-.md-tabs__link {
-  transition: background 0.3s ease, border-radius 0.3s ease;
-  position: relative;
-  padding: 1.5rem 1.5rem !important; /* Larger clickable area */
-  min-width: 100px;
-  display: inline-block;
-}
-
-.md-tabs__link:hover {
-  background: rgba(0, 122, 255, 0.1);
-  border-radius: 8px;
-}
-
-/* Remove underline animation that causes movement */
 
 /* Animated bullet points */
 .md-typeset ul {
