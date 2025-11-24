@@ -1,5 +1,21 @@
 // Interactive gradient background that follows mouse movement
 document.addEventListener('DOMContentLoaded', function() {
+  // Check if device is mobile/touch
+  const isMobile = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  
+  if (isMobile) {
+    // On mobile, just set static gradient background
+    const body = document.body;
+    const isDarkMode = body.getAttribute('data-md-color-scheme') === 'slate';
+    
+    if (isDarkMode) {
+      body.style.background = '#1a1a1a';
+    } else {
+      body.style.background = 'linear-gradient(135deg, rgba(0, 122, 255, 0.03) 0%, rgba(90, 200, 250, 0.05) 100%), #ffffff';
+    }
+    return; // Exit early on mobile
+  }
+  
   const body = document.body;
   let mouseX = 0;
   let mouseY = 0;
