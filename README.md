@@ -2,7 +2,7 @@
 
 A modern, interactive personal website built with MkDocs Material, featuring Apple-inspired design, custom animations, and interactive elements.
 
-🌐 **Live Site**: [https://chenli-git.github.io/chenli-website/](https://chenli-git.github.io/chenli-website/)
+🌐 **Live Site**: [https://chenli-git.github.io/](https://chenli-git.github.io/)
 
 ## Features
 
