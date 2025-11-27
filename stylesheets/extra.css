@@ -1,0 +1,245 @@
+/* Apple-inspired gradient background */
+:root {
+  --gradient-start: #007AFF;
+  --gradient-mid: #5856D6;
+  --gradient-end: #AF52DE;
+}
+
+/* Body background for interactive effect */
+body {
+  transition: background 0.3s ease;
+  background-attachment: fixed;
+}
+
+/* Show default cursor on navigation tabs and header */
+.md-header,
+.md-tabs,
+.md-tabs__link {
+  cursor: default !important;
+}
+
+body {
+  cursor: none; /* Hide default cursor for main content */
+}
+
+/* Hide custom cursor on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: default !important;
+  }
+  
+  .custom-cursor,
+  .cursor-follower {
+    display: none !important;
+  }
+}
+
+/* Custom fancy cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007AFF;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.15s ease, height 0.15s ease, border-color 0.15s ease;
+  background: rgba(0, 122, 255, 0.3);
+}
+
+.custom-cursor::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #007AFF;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 122, 255, 0.8);
+}
+
+/* Cursor follower trail */
+.cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(0, 122, 255, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.25s ease;
+  background: radial-gradient(circle, rgba(0, 122, 255, 0.1), transparent);
+}
+
+/* Cursor hover effects on links and buttons */
+body:has(a:hover) .custom-cursor,
+body:has(button:hover) .custom-cursor {
+  width: 40px;
+  height: 40px;
+  border-color: var(--gradient-mid);
+  background: radial-gradient(circle, rgba(88, 86, 214, 0.2), transparent);
+}
+
+body:has(a:hover) .cursor-follower,
+body:has(button:hover) .cursor-follower {
+  width: 60px;
+  height: 60px;
+  border-color: var(--gradient-end);
+}
+
+/* Content container with subtle backdrop */
+.md-main__inner {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-main__inner {
+  background: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Light mode gradient background */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #007AFF;
+  --md-accent-fg-color: #5AC8FA;
+}
+
+[data-md-color-scheme="default"] .md-header {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+}
+
+/* Dark mode sleek background */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0A84FF;
+  --md-accent-fg-color: #64D2FF;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: linear-gradient(135deg, #1d1d1f 0%, #2d2d30 50%, #3a3a3c 100%);
+}
+
+/* Hide left sidebar navigation since we have top tabs */
+.md-sidebar--primary {
+  display: none !important;
+}
+
+/* Remove all animations from navigation tabs */
+.md-tabs,
+.md-tabs__link,
+.md-tabs__item {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Simple hover effect without movement */
+.md-tabs__link:hover {
+  background: rgba(0, 122, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Smooth glassmorphism effect for cards */
+.md-typeset h2 {
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Apple-style buttons and links */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  transition: all 0.3s ease;
+}
+
+.md-typeset a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
+
+/* Smooth animations */
+.md-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile image with Apple glow effect */
+img[alt="Chen Li"] {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 10px 30px rgba(0, 122, 255, 0.3));
+}
+
+img[alt="Chen Li"]:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 15px 40px rgba(0, 122, 255, 0.5));
+}
+
+/* Highlight boxes with gradient borders */
+.md-typeset .admonition {
+  border-left: 4px solid;
+  border-image: linear-gradient(180deg, var(--gradient-start), var(--gradient-end)) 1;
+  backdrop-filter: blur(10px);
+}
+
+/* Animated bullet points */
+.md-typeset ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.md-typeset ul li {
+  position: relative;
+  padding-left: 1.5em;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.md-typeset ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0.3em;
+  color: var(--md-primary-fg-color);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.md-typeset ul li:hover::before {
+  transform: scale(1.5);
+  text-shadow: 0 0 10px rgba(0, 122, 255, 0.6);
+}
+
+.md-typeset ul li:nth-child(1) { animation-delay: 0.1s; }
+.md-typeset ul li:nth-child(2) { animation-delay: 0.2s; }
+.md-typeset ul li:nth-child(3) { animation-delay: 0.3s; }
+.md-typeset ul li:nth-child(4) { animation-delay: 0.4s; }
+.md-typeset ul li:nth-child(5) { animation-delay: 0.5s; }
+.md-typeset ul li:nth-child(n+6) { animation-delay: 0.6s; }
+
+.md-typeset ul li:hover {
+  transform: translateX(5px);
+  color: var(--md-primary-fg-color);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
